@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Questions List</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body id="home">
+        <div class="container box" >
+            <div class="row col-md-7 col-md-offset-2 custyle">
+                <fieldset>
+                    <table class="table table-striped custab">
+                        <thead>
+                            <tr>
+                                <th style="color:white">Id</th>
+                                <th style="color:white">Question</th>
+                                <th style="color:white">Response</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:mistyrose">1</td>
+                                <td style="color:turquoise">{{questionsData[0].question}}</td>
+                                <td>
+                                    <select id="response" class="form-select" name="response" [(ngModel)]="questionsData[0].response" required>
+                                        <option value="">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color:mistyrose">2</td>
+                                <td style="color:turquoise">{{questionsData[1].question}}</td>
+                                <td>
+                                    <select id="response" name="response" class="form-select" [(ngModel)]="questionsData[1].response" required>
+                                        <option value="">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color:mistyrose">3</td>
+                                <td style="color:turquoise">{{questionsData[2].question}}</td>
+                                <td>
+                                    <select id="response" name="response" class="form-select" [(ngModel)]="questionsData[2].response" required>
+                                        <option value="">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color:mistyrose">4</td>
+                                <td style="color:turquoise">{{questionsData[3].question}}</td>
+                                <td>
+                                    <select id="response" name="response" class="form-select" [(ngModel)]="questionsData[3].response" required>
+                                        <option value="">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color:mistyrose">5</td>
+                                <td style="color:turquoise">{{questionsData[4].question}}</td>
+                                <td>
+                                    <select id="response" name="response" class="form-select" [(ngModel)]="questionsData[4].response" required>
+                                        <option value="">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group text-center">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Submit" (click)="showResponse()">
+                    </div>
+                </fieldset>
+            </div>
+            <div id="button">
+                <button class="btn btn-dark" routerLink="/logout">Logout</button>
+            </div>
+        </div> 
+    </body>
+</html>
